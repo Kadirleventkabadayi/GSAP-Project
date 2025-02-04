@@ -127,19 +127,20 @@ export default function Home() {
             </div>
             <div className="copy">
               <div className="line">
-                <p>This will be the first cool text</p>
+                <p>Unleash Your Creativity</p>
               </div>
             </div>
             <div className="copy">
               <div className="line">
-                <p>This will be the second cool text</p>
+                <p>Transform Your Ideas</p>
               </div>
             </div>
             <div className="copy">
               <div className="line">
-                <p>This will be the third cool text</p>
+                <p>Discover New Possibilities</p>
               </div>
             </div>
+
             <div className="btn">
               <button
                 style={{ cursor: "pointer" }}
