@@ -7,10 +7,24 @@
 html,
 body {
   width: 100%;
-  height: 100%;
   font-family: "Mabry Pro";
   background-color: #000;
   color: #fff;
+  background-image: linear-gradient(
+    to left bottom,
+    #0c2a0c,
+    #1d2100,
+    #221800,
+    #201100,
+    #180905,
+    #170d0b,
+    #151010,
+    #141313,
+    #1e1c1c,
+    #282426,
+    #312d30,
+    #3b373b
+  );
 }
 
 img {
