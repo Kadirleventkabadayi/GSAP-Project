@@ -3,7 +3,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import Card from "./Card"; // Card component
+import Card from "./Card";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,8 +16,8 @@ const Main: React.FC = () => {
     const yValues = [100, -150, -400];
 
     gsap.utils.toArray(".row").forEach((row, i) => {
-      const cardLeft = row.querySelector(".card-left");
-      const cardRight = row.querySelector(".card-right");
+      const cardLeft = (row as HTMLElement).querySelector(".card-left");
+      const cardRight = (row as HTMLElement).querySelector(".card-right");
 
       gsap.to(cardLeft, {
         scrollTrigger: {
@@ -27,11 +27,13 @@ const Main: React.FC = () => {
           scrub: true,
           onUpdate: (self) => {
             const progress = self.progress;
-            cardLeft.style.transform = `translateX(${
-              leftXValues[i] * progress
-            }px) translateY(${yValues[i] * progress}px) rotate(${
-              leftRotationValues[i] * progress
-            }deg)`;
+            if (cardLeft) {
+              (cardLeft as HTMLElement).style.transform = `translateX(${
+                leftXValues[i] * progress
+              }px) translateY(${yValues[i] * progress}px) rotate(${
+                leftRotationValues[i] * progress
+              }deg)`;
+            }
           },
         },
       });
@@ -44,7 +46,7 @@ const Main: React.FC = () => {
           scrub: true,
           onUpdate: (self) => {
             const progress = self.progress;
-            cardRight.style.transform = `translateX(${
+            (cardRight as HTMLElement).style.transform = `translateX(${
               rightXValues[i] * progress
             }px) translateY(${yValues[i] * progress}px) rotate(${
               rightRotationValues[i] * progress
@@ -112,7 +114,7 @@ const Main: React.FC = () => {
     <section className="main">
       <div className="main-content">
         <div className="logo">
-          <img src="/newpp.png" alt="Logo" />
+          <img src="/newpp.png" alt="pp" />
         </div>
         <div className="copy">
           <div className="line">
