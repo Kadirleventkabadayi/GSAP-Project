@@ -7,7 +7,7 @@ import { ReactLenis } from "lenis/react";
 
 export default function Home() {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger); 
+    gsap.registerPlugin(ScrollTrigger);
 
     const leftXValues = [-800, -900, -400];
     const rightXValues = [800, 900, 400];
@@ -117,7 +117,7 @@ export default function Home() {
       <ReactLenis root>
         <section className="hero">
           <div className="img">
-            <img src="/pro-logo.png" alt="" />
+            <img src="/gsaplogo.png" alt="" />
           </div>
         </section>
         <section className="main">
@@ -141,7 +141,14 @@ export default function Home() {
               </div>
             </div>
             <div className="btn">
-              <button>Get PRO</button>
+              <button
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  console.log("cliked");
+                }}
+              >
+                Get Contact
+              </button>
             </div>
           </div>
 
@@ -149,7 +156,7 @@ export default function Home() {
         </section>
         <section className="footer">
           <Link href="https://kadirleventkabadayi.vercel.app/">
-            Link is description
+            Link in description
           </Link>
         </section>
       </ReactLenis>
