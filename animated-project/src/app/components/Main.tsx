@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import Card from "./Card";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -133,7 +134,9 @@ const Main: React.FC = () => {
         </div>
 
         <div className="btn">
-          <button onClick={() => console.log("clicked")}>Get Contact</button>
+          <Link href="https://kadirleventkabadayi.vercel.app/">
+            <button>Get Contact</button>
+          </Link>
         </div>
       </div>
 
